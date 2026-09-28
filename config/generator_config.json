@@ -1,0 +1,46 @@
+{
+  "project_name": "NovaPay Remittance Analytics Platform",
+  "generation_profile": "small_test",
+  "random_seed": 20260927,
+  "period": {
+    "start_date": "2024-01-01",
+    "end_date": "2026-08-31"
+  },
+  "scale": {
+    "registration_attempt_count": 100,
+    "minimum_transaction_attempts_per_customer": 0,
+    "maximum_transaction_attempts_per_customer": 8
+  },
+  "timing_rules": {
+    "attempt_abandonment_minutes": 20,
+    "payment_delayed_seconds": 30,
+    "payment_confirmation_pending_minutes": 2,
+    "payment_escalation_minutes": 10,
+    "payment_exception_hours": 24,
+    "straight_through_payout_target_minutes": 2,
+    "overall_completion_target_minutes": 5
+  },
+  "compliance_rules": {
+    "rolling_window_months": 12,
+    "volume_threshold_gbp": 10000.0,
+    "required_documents": [
+      "ProofOfAddress",
+      "SourceOfFunds"
+    ]
+  },
+  "sending_markets": [
+    {"country_code": "GB", "currency": "GBP"},
+    {"country_code": "IE", "currency": "EUR"},
+    {"country_code": "FR", "currency": "EUR"},
+    {"country_code": "DE", "currency": "EUR"},
+    {"country_code": "ES", "currency": "EUR"},
+    {"country_code": "AU", "currency": "AUD"}
+  ],
+  "destination_markets": [
+    {"country_code": "NG", "currency": "NGN"},
+    {"country_code": "GH", "currency": "GHS"},
+    {"country_code": "ZM", "currency": "ZMW"},
+    {"country_code": "CM", "currency": "XAF"},
+    {"country_code": "ZW", "currency": "USD"}
+  ]
+}

@@ -40,3 +40,4 @@ data/quarantine/
 # Logs
 *.log
 logs/
+!.env.example
